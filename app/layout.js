@@ -1,13 +1,14 @@
 import Link from "next/link";
-import Provider from "./provider";
-import ThemeSwitch from "../utils/themeSwitch";
+import Providers from "./providers";
+import ThemeSwitch from "./components/themeSwitch";
+import './css/main.css'
 
 export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning>
       <head />
       <body>
-        <Provider>
+        <Providers>
           <main>
             <ThemeSwitch />
             <nav>
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
             </nav>
           </main>
           {children}
-        </Provider>
+        </Providers>
       </body>
     </html>
   );
